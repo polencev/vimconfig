@@ -1,8 +1,9 @@
 "source ~/.vim/vimrc
 set t_Co=256
-colorscheme automation "цветовая схема. 
+colorscheme neverland "цветовая схема. 
+"colorscheme automation "цветовая схема. 
 "Годные темы: дневные: autumn, bog, fog, lingodirector, martin_krischik, moria, PapayaWhip, seashell, soso, vcbc, white, morning, shine
-"ночные: candycode, cool, darkblack, earendel, freya, gothic, hhdgray, impact, jhdark, motus, relaxedgreen, sean, torte, wuye, xoria, zenburn
+"ночные: automation, candycode, cool, darkblack, earendel, freya, gothic, hhdgray, impact, jhdark, motus, relaxedgreen, sean, torte, wuye, xoria, zenburn
 
 
 call pathogen#helptags()
@@ -28,3 +29,7 @@ set sw=4
 set sts=4
 set smartindent "умный отступ
 set langmap=ФИСВУАПРШОЛДЖЬТЩЗЙКЫЕГМЦЧНЯфисвуапршолдьтщзйкыегмцчня;ABCDEFGHIJKL:MNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+
+
+" Для поддержки Objective-J
+au BufNewFile,BufRead *.j,Jakefile setf objj
