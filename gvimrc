@@ -1,5 +1,5 @@
 "source ~/.vim/vimrc
-set t_Co=256
+set guifont=Monaco\ 11 
 colorscheme neverland "цветовая схема. 
 "colorscheme automation "цветовая схема. 
 "Годные темы: дневные: autumn, bog, fog, lingodirector, martin_krischik, moria, PapayaWhip, seashell, soso, vcbc, white, morning, shine
@@ -18,10 +18,14 @@ map <F4>   :call NextColorScheme()<CR>
 map <F3> :call PreviousColorScheme()<CR> 
 "map <C-F4> :call RandomColorScheme()<CR> 
 map <C-F4>   :call RemoveCurrentColorScheme()<CR>
-
+" Add theme name to ruler
 set ruler
 set rulerformat=%55(:%{g:colors_name}:\ %5l,%-6(%c%V%)\ %P%) 
 
+" Opens new tab in normal mode
+nmap Tn :tabnew <CR>
+map tj :tabnext<CR>
+map tk :tabprev<CR>
 
 
 set nu "нумерация строк
@@ -34,5 +38,5 @@ set langmap=ФИСВУАПРШОЛДЖЬТЩЗЙКЫЕГМЦЧНЯфисвуап
 " Для поддержки Objective-J
 au BufNewFile,BufRead *.j,Jakefile setf objj
 
-" Для поддержки мыши
-set mouse=a
+" Для правильной работы Backspace в режиме вставки 
+"set backspace=indent,eol,start
